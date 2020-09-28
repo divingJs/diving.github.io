@@ -1,0 +1,42 @@
+<article class="d-article">
+	<div class="d-col-12">
+		<section class="d-article-section">
+			<div id="btn"></div>
+			<div id="btn2"></div>
+			<div id="ventana"></div>
+		</section>
+	</div>
+</article>
+<script type="text/javascript">
+	dvn('#btn').divButton({
+		type:'default',
+		text:'open',
+		click:function(){
+			if( !dvn('#ventana').data('divWindow') ){
+				dvn('#ventana').divWindow({
+					title: dvn('<div>',{text:'Hola que tal'})[0],
+					content: '<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At est iste similique eos, earum, repellat suscipit deserunt quia asperiores minima harum maxime beatae eveniet, eligendi aspernatur, soluta nisi id doloremque!</div><div>Consectetur dolore alias reiciendis eos totam praesentium, magnam non sed repellendus eius? Quisquam voluptatibus fugiat accusamus deserunt voluptatem, dolorem eius molestiae sint facilis harum provident necessitatibus, ullam atque enim. Pariatur.</div><div>Asperiores, illo. Voluptates excepturi sunt natus assumenda itaque aut, similique fugiat qui ullam possimus, voluptate, cum quidem, architecto iste provident dolor? Blanditiis magni aliquid rerum numquam, suscipit! Rem, ad, itaque.</div><div>Molestiae, delectus autem! Dolorum incidunt voluptate exercitationem, quia deserunt dolorem ipsam soluta laboriosam excepturi inventore porro voluptatibus veniam, necessitatibus quidem ex. Quaerat voluptatum laboriosam exercitationem excepturi ipsa incidunt mollitia, accusamus!</div><div>Odio ea saepe ipsam laboriosam quidem, recusandae deserunt dignissimos fugiat quibusdam. Saepe, nostrum, ullam eveniet pariatur voluptates odit fuga atque ea, nobis sit soluta odio adipisci quas excepturi maxime quae.</div>',
+					actions:['close','minimize','maximize'],
+					//modal:true,
+					width: 300,
+					height: 200,
+					scrollable:{
+						x:'hidden',
+						y:'scroll'
+					}
+				});
+				dvn('#ventana').data('divWindow').center();
+			}else{
+				dvn('#ventana').data('divWindow').open();
+			}
+		}
+	});
+
+	dvn('#btn2').divButton({
+		type:'default',
+		text:'Destroy',
+		click:function(){
+			dvn('#ventana').data('divWindow')?dvn('#ventana').data('divWindow').destroy():'';
+		}
+	});
+</script>

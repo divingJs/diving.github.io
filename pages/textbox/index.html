@@ -1,0 +1,64 @@
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-header">divTextBox</header>
+			<section class="d-article-section">Puedes crear diversos tipos de textbox tales como textbox normal, con mascara, multilinea, numerico</section>
+			<section class="d-article-section">
+				<div class="d-col-6">
+					<div id="txtbox"></div>
+				</div>
+			</section>
+		</article>
+	</div>
+</div>
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-heder">textBox:MultiLine</header>
+			<section class="d-article-section">Hacer un multilinea es mas sencillo que antes</section>
+			<section class="d-article-section">
+				<div class="d-col-6">
+					<div id="txtMultiLine"></div>
+				</div>
+			</section>
+		</article>
+	</div>
+</div>
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-heder">textBox:numerico</header>
+			<section class="d-article-section">Restriccion de solo numeros, asi de facil</section>
+			<section class="d-article-section">
+				<div class="d-col-6">
+					<div id="txtNumber"></div>
+				</div>
+			</section>
+		</article>
+	</div>
+</div>
+<script type="text/javascript">
+	dvn('#txtbox').divText({
+		placeholder:'textbox',
+		keyup:function(){
+			var t = dvn('#txtbox').data('divText');
+			console.log( t );
+		}
+	});
+	dvn('#txtMultiLine').divText({
+        placeHolder: 'este es unt exto',
+        change:function(){
+            var elem = dvn('#txtMultiLine').data('divText');
+            console.log( elem.text );
+        },
+        multiple:{
+            col:10,
+            row:20,
+            resize:false
+        }
+    });
+	dvn('#txtNumber').divText({
+		type: 'number',
+		min: 0
+	});
+</script>

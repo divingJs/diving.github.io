@@ -1,0 +1,23 @@
+<div id="tabs" class="d-col-6"></div>
+
+<div id="cnt1" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat, eius aliquam. Suscipit architecto, aliquam labore perferendis fugiat ipsam error possimus, exercitationem tempora vel eligendi nostrum et maiores, odit iusto?</div>
+<div id="cnt2" >
+	<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam recusandae deleniti laboriosam, iure praesentium ea laborum molestias vel voluptates consequatur iusto dolores nemo ut, eos dolorem earum similique temporibus.</div>
+	<div>Accusamus assumenda iure maxime cupiditate libero, neque facilis beatae eaque voluptate omnis adipisci? Consequatur, eum, sint. Eius aliquid accusamus, explicabo asperiores est architecto vel voluptatem ipsum impedit, unde, minima accusantium.</div>
+</div>
+<script type="text/javascript">
+
+	dvn('#tabs').divTabsTrip({
+		content:[
+			{title: 'titulo 1', element: '#cnt1', open:true},
+			{title: 'titulo 2', element: '#cnt2' },
+			{title: 'titulo 3', element: dvn('<div>',{text:'loopReplacer(match, start, end, snippet)'})},
+			{title: 'titulo 4', element: dvn('<div>',{text:'estas en el contenido 4<br>contenido 4<br>contenido 4<br>contenido 4<br>contenido 4'})},
+			{title: 'titulo 5', element: dvn('<div>',{text:'estas en el contenido 5<br>contenido 5<br>contenido 5<br>contenido 5<br>contenido 5'})},
+			{title: 'titulo 6', element: dvn('<div>',{text:'estas en el contenido 6<br>contenido 6<br>contenido 6<br>contenido 6<br>contenido 6'})},
+			{title: 'titulo 7', element: dvn('<div>',{text:'estas en el contenido 7<br>contenido 7<br>contenido 7<br>contenido 7<br>contenido 7'})},
+			{title: 'titulo 8', element: dvn('<div>',{text:'estas en el contenido 8<br>contenido 8<br>contenido 8<br>contenido 8<br>contenido 8'})},
+			{title: 'titulo 9', element: dvn('<div>',{text:'estas en el contenido 9<br>contenido 9<br>contenido 9<br>contenido 9<br>contenido 9'})}
+		]
+	});
+</script>

@@ -1,0 +1,76 @@
+<article class="d-article">
+	<header class="d-article-header">divListView</header>
+	<section class="d-article-section">
+		<div>una lista que te servira para mostrar informacion de primera</div>
+		<div class="d-row">
+			<div class="d-col-4">
+				<div id="listView"></div>
+			</div>
+			<div class="d-col-4">
+				<div id="listView2"></div>
+			</div>
+		</div>
+		<div class="d-row">
+			<div class="d-col-12">
+				<div id="salida"></div>
+			</div>
+		</div>
+	</section>
+</article>
+
+<style>
+	.d-listView-item:last-child {
+	    border: none;
+	}
+	.d-listView-item:hover {
+	    background-color: #bbb7b7;
+	}
+	.d-listView-item {
+	    padding: 0.5em;
+	    border-bottom: solid 1px;
+	    background-color: #fbfbfb;
+	}
+	.d-listview {
+	    padding: 0;
+	    list-style: none;
+	    margin: 0;
+	}
+
+	.d-listview-content {
+	    border: solid 1px;
+	    padding: 0;
+	}
+</style>
+
+
+
+
+
+
+<script>
+	var dt = [
+		{field:'elemento01',text:'elemento 01'},
+		{field:'elemento02',text:'elemento 02'},
+		{field:'elemento03',text:'elemento 03'},
+		{field:'elemento04',text:'elemento 04'},
+		{field:'elemento05',text:'elemento 05'},
+		{field:'elemento06',text:'elemento 06'},
+		{field:'elemento07',text:'elemento 07'},
+		{field:'elemento08',text:'elemento 08'},
+		{field:'elemento09',text:'elemento 09'},
+		{field:'elemento10',text:'elemento 10'}
+	];
+	var dtlm2 = function(elm){
+		dvn('#salida').text( 'el elemento '+ diving(this.elem).attr('id') + ' da como resultado {value:'+this.selected[0].value+',text:'+this.selected[0].text+'}');
+	}
+	dvn('#listView').divListView({
+		data:dt,
+		click:dtlm2,
+		template: '<div>Dato #:text#</div>'
+	});
+	dvn('#listView2').divListView({
+		data:dt,
+		click:dtlm2,
+		template: '<div>Dato #:text#</div>'
+	});
+</script>
