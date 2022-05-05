@@ -1,0 +1,31 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');*
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans&display=swap');*/
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans:wdth,wght@77,300&display=swap');
+*{
+    font: 14.5px/17.1px 'Nunito';
+}
+body{background-color: #E0E0E0;}
+.d-block{display: block;} 
+.d-block::after{content: " ";white-space: pre;}
+.d-article{background-color: white;}
+.m-header{list-style:none;height: 3em;}
+.mh-item{float:left;padding: 1em;}
+.mh-item:hover{background-color: #10104433;text-decoration: underline blue;cursor: pointer;color: #0102aa;}
+.menu{list-style-type: none;padding: 0;}
+.item-menu,.sub-item-menu{padding: 0.5em;cursor: pointer;}
+.item-menu .submenu{list-style: none;padding: 0;padding-left: 0.5em;}
+.sub-item-menu:last-child{padding-bottom: 0;}
+.selected{color:#005896;}
+.bienvenida{background-color: #40404033;}
+.bienvenida div{margin: 1em 1em;}
+.cnt{padding: 1em;border: solid 1px #40404033;margin-top: 0.25em;background-color: #ecf0f3;border-radius: 5px;}
+.texto{text-align: justify;margin-left: 1em;}
+pre{/*background-color: #5a5757;color: #fafafa;*/padding: 0.5em;overflow:hidden;overflow-x:scroll;}
+.search-icon{width: 100%;padding: 0.5em;}
+.icono em{font-size: 2em;}
+.bg{position: absolute;height: 15em;background-color: #800a21;width: 100%;z-index: -1;}
+.cnt h4{
+    cursor:  pointer;
+}
+.cnt h4:hover{
+}

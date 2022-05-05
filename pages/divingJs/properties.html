@@ -1,0 +1,248 @@
+<!--
+<div class="d-row" id="encabezado">
+     <div class="d-col-2">
+          <div class="d-block"></div>
+     </div>
+     <div class="d-col-10">
+          <div>divingJS es una libreria de javaScript que te brinda funciones que te permitiran un facil manejo de los objetos del DOM.</div>
+          <div>Con llamadas asincronas de facil manejo y mas de 5000 iconos listos para usar. </div>
+          <div>Si eres nuevo por aquí, date una vuelta por nuestros tutoriales, la seccion UI.</div>
+     </div>
+</div>
+<div class="d-clear"></div>
+<br>
+-->
+<div class="d-clear"></div>
+<div class="d-row">
+     <div class="d-col-2 d-sn-left d-sn-right">
+          <ul class="menu" id="menu">
+               <li class="item-menu selected" dvn-role="home">
+                    <div class="itm">Home</div>
+               </li>
+               <li class="item-menu" dvn-role="prop">
+                    <div class="itm">Properties</div>
+               </li>
+               <li class="item-menu" dvn-role="impl">
+                    <div class="itm">Implementation</div>
+               </li>
+               <li class="item-menu" dvn-role="meth">
+                    <div class="itm">Methods</div>
+               </li>
+               <!--li class="item-menu" dvn-role="call">
+                    <div class="itm">Calls</div>
+               </li-->
+               <li class="item-menu" dvn-role="icon">
+                    <div class="itm">Icons</div>
+               </li>
+          </ul>
+     </div>
+     <div class="d-col-10">
+          <div id="contentPage"></div>
+     </div>
+</div>
+
+<div id="dProp" class="d-hidden">
+     <div class="d-article">
+          <div class="d-article-header">Propperties</div>
+          <div class="d-article-section">
+               <div class="cnt">
+                    <h4 onclick="openDetail('addClass');">.addClass()</h4>
+                    <div class="texto">Permite agregar una o varias clases a un elemento.</div>
+               </div>
+               <div class="cnt">
+                    <h4 onclick="openDetail('append');">.append()</h4>
+                    <div class="texto">Agrega un objeto diving a un elmento, incluye los atributos que este contenga.</div>
+               </div>
+               <div class="cnt">
+                    <h4 onclick="openDetail('attr');">.attr()</h4>
+                    <div class="texto">Muestra los atributos de un elemento o bien permite agregar atributos a un elemento ya existente.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.center()</h4>
+                    <div class="texto">Centra el elemento en la pantalla.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.css()</h4>
+                    <div class="texto">Agrega estilo directamente al elemnto ( element.style )</div>
+               </div>
+               <div class="cnt">
+                    <h4>.data()</h4>
+                    <div class="texto">Permite guardar un objeto en cache asociado a un elemento del DOM y reutilizar posteriormente.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.empty()</h4>
+                    <div class="texto">Limpia el objeto diving </div>
+               </div>
+               <div class="cnt">
+                    <h4>.find()</h4>
+                    <div class="texto">Devuelve un array con los elementos encontrados mediante el parametro que se pasa.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.hasClass()</h4>
+                    <div class="texto">Devuelve true o false si tiene o no la clase que se pasa como parametro.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.hide()</h4>
+                    <div class="texto">Oculta el elemento.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.parent()</h4>
+                    <div class="texto">Devuelve el elemento padre en el que se encuentra el elemento que se esta parentando.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.prepend()</h4>
+                    <div class="texto">Inserta el objeto diving antes del contenido que este tenga.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.remove()</h4>
+                    <div class="texto">Remueve el elemento al igual que los elementos contenidos dentro de el.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.removeAttr()</h4>
+                    <div class="texto">Remueve el attributo que se pasa como parametro.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.removeClass()</h4>
+                    <div class="texto">Remueve la clase que se pasa como parametro.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.show()</h4>
+                    <div class="texto">Vuelve visible el elemento.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.text()</h4>
+                    <div class="texto">Obtiene o reemplaza el texto ( contenido ) de un elemento.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.toggleClass()</h4>
+                    <div class="texto">Intercambia la clase actual del elemento con la que se pasa como parametro.</div>
+               </div>
+               <div class="cnt">
+                    <h4>.trigger()</h4>
+                    <div class="texto">Dispara un trigger sobre el elemento seleccionado.</div>
+               </div>
+          </div>
+     </div>
+</div>
+<div id="dImp" class="d-hidden">
+     <div class="d-article">
+          <div class="d-article-header">Implementacion</div>
+          <div class="d-article-section">
+               <div class="cnt">
+                    <div class="texto">
+                         Comienze a utilizar diving de una manera bastante sensilla y facil de usar, manejando unicamente el apartado de js, o bien, si lo que requiere un diseño rapido y de alta calidad. 
+                    </div>
+                    <div class="texto">
+                         Agase de nuestro apartado CSS, que le brindara una alta variedad de estilo y diseño a la altura de sus necesidades.
+                    </div>
+                    <div class="texto">
+                         Sin dejar de mensionar que contamos con mas de 5000 iconos que divingJS pone a tu disposici&oacute;n.
+                    </div>
+               </div>
+               <div class="cnt">
+                    <div class="texto">
+                         El uso esclusivo de nuestra libreria JS, brindara un sin fin de funciones para un facil manejo de los elmentos dentro del dom.
+                    </div>
+                    <pre>&lt;style type="text/javascript" src="lib/diving-3.0.1/js/diving-core-3.0.1.js"&gt;&lt;/style&gt;</pre>
+               </div>
+               <div class="cnt">
+                    <div class="texto">
+                         por otro lado, divingJs cuenta con un estilo atractivo para internet y sus usuarios.
+                    </div>
+                    <pre>&lt;link rel="stylesheet" type="text/css" href="lib/diving-3.0.1/css/diving-3.0.1.css" /&gt;
+&lt;style type="text/javascript" src="lib/diving-3.0.1/js/diving-core-3.0.1.js"&gt;&lt;/style&gt;</pre>
+               </div>
+          </div>
+     </div>
+</div>
+
+<div id="mth" class="d-hidden">
+     <div class="d-article">
+          <div class="d-article-header">Methods</div>
+          <div class="d-article-section">
+               <div class="cnt">
+                    <h4>.addPx()</h4>
+                    <div class="texto">
+                         Permite evaluar el tipo de valor que se esta agregando a un estilo ya sea que se pasa numerico o string agregara de ser necesario px para identificar como pixeles en caso de que no se aya definido.
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.draggable()</h4>
+                    <div class="texto">
+                         Construye a un objeto del DOM en un elmento draggable.
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.each()</h4>
+                    <div class="texto">
+                         Recorre un arreglo devolviendo un callback( posicion, elemento )
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.extend()</h4>
+                    <div class="texto">
+                         Permite extender las propiedades de un objeto, o bien en algunos casos sobreescribirlas.
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.find()</h4>
+                    <div class="texto">
+                         Busca un elemento dentro del DOM
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.isFunction()</h4>
+                    <div class="texto">
+                         Evaluar si una variable es o no funcion.
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.map()</h4>
+                    <div class="texto">
+                         Mapea un objeto
+                    </div>
+               </div>
+               <div class="cnt">
+                    <h4>.template()</h4>
+                    <div class="texto">
+                         Realiza un template de algun elemento del dom 
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<div id="undefined" class="d-hidden">
+     <div class="d-article">
+          <div class="d-article-header">titulo</div>
+          <div class="d-article-section">
+               <div class="cnt">
+                    <h4>titulo</h4>
+                    <div class="texto">
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+
+<script type="text/javascript">
+     (function(){
+          //dvn('#contentPage')[0].innerHTML=dvn('#dProp')[0].innerHTML;
+          loadHref(dvn('#contentPage'),'pages/divingJs/home.html');
+
+     })();
+     dvn('#menu').click(function(e){
+          var target = (e.target.nodeName=='DIV')?dvn(e.target).parent():dvn(e.target);
+          utilitiesController.activeSelected(dvn('#menu').find('li'),target);
+          dvn('#contentPage').empty();
+          switch(target.attr('dvn-role')){
+               case 'home':loadHref(dvn('#contentPage'),'pages/divingJs/home.html');   break;
+               case 'prop':dvn('#contentPage')[0].innerHTML=dvn('#dProp')[0].innerHTML;break;
+               case 'impl':dvn('#contentPage')[0].innerHTML=dvn('#dImp')[0].innerHTML; break;
+               case 'meth':dvn('#contentPage')[0].innerHTML=dvn('#mth')[0].innerHTML;  break;
+               case 'icon':loadHref(dvn('#contentPage'),'pages/divingJs/iconos.html'); break;
+          }
+     });
+
+
+</script>

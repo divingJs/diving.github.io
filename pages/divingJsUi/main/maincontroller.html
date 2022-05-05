@@ -1,0 +1,80 @@
+<div class="d-row">
+	<div class="d-col-2 d-sn-left d-sn right">
+		<!--
+		<div id="menuUI"></div>
+		-->
+		<ul class="menu" id="menuUI">
+			<li class="item-menu" dvn-role="div_home">inicio</li>
+			<li class="item-menu itm-cnt-submenu"><div>Componentes</div>
+				<ul class="submenu">
+					<li class="item-menu" dvn-role="divAutoComplete">AutoComplete</li>
+					<li class="item-menu" dvn-role="divButton">Button</li>
+					<!--<li class="item-menu" dvn-role="null">Chart</li>-->
+					<li class="item-menu" dvn-role="divGrid">grid</li>
+					<li class="item-menu" dvn-role="Icons">iconos</li>
+					<li class="item-menu" dvn-role="divListView">listView</li>
+					<li class="item-menu" dvn-role="divMultiSelect">multiSelect</li>
+					<!--<li class="item-menu" dvn-role="null">menu</li>-->
+					<li class="item-menu" dvn-role="divNotificacion">notification</li>
+					<li class="item-menu" dvn-role="divTabsTrip">tabstrip</li>
+					<li class="item-menu" dvn-role="divTextBox">texto</li>
+					<!--<li class="item-menu" dvn-role="null">window</li>-->
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="d-col-10">
+		<div id="entorno"></div>
+	</div>
+</div>
+<script type="text/javascript">
+
+
+dvn('#menuUI').click(function(e){
+	var target = (e.target.nodeName=='DIV')?dvn(e.target).parent():dvn(e.target);
+	var role = dvn(target).attr('dvn-role');
+	dvn('#entorno').empty();
+	/*var salida = dvn('<iframe>',{id:'slda',style:'width:100%;height:100%'});
+	dvn('#entorno').append(salida);*/
+	loadJSON('pages/divingJsUi/JSON/'+role+'.json',function(e){
+
+		var json = JSON.parse(e);
+		var css = dvn('<style>',{
+			type:'text/css','d-role':'d-editor-style',
+			text:json.css
+		});
+		dvn('#entorno')[0].innerHTML=json.html;
+
+		setTimeout(function(){
+			window.eval(json.js);
+		},500);
+	}); 
+});
+
+
+
+function actions(){
+	var UI = dvn(this).attr('d-value');
+	if( UI == 'div_home' ){
+		loadHref(dvn('#entorno'),'pages/divingJsUi/main/'+(UI.replace('div_',''))+'.html');
+	}else if( !UI.startsWith('item_') ){
+		loadHref(dvn('#entorno'),'pages/divingJsUi/'+(UI.replace('div_',''))+'/'+(UI.replace('div_',''))+'.html');
+	}
+}
+loadHref(dvn('#entorno'),'pages/divingJsUi/main/home.html');
+
+
+function loadJSON(ruta,callback) {
+	var xobj = new XMLHttpRequest();
+   	xobj.overrideMimeType("application/json");
+	xobj.open('GET', ruta, true); // Replace 'my_data' with the path to your file
+	xobj.onreadystatechange = function () {
+	     if (xobj.readyState == 4 && xobj.status == "200") {
+	     	callback(xobj.responseText);
+	     }
+	};
+	xobj.send(null);  
+}
+
+
+</script>

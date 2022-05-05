@@ -1,0 +1,85 @@
+<style>
+	.aEstilosHTML,.aSelectHTML{
+		height: 19em;
+	}
+	.opBtn{
+		padding: 0.5em;
+		display: inline-block;
+	}
+</style>
+
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-header">divChart</header>
+			<section class="d-article-section">
+				DivingJS te brinda una biblioteca de graficos simples para un manejo visual de tu informaci&oacute;n 
+			</section>
+			<section class="d-article-section">
+				<div id="aEstilos"></div>
+			</section>
+		</article>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	function armaTabsTrip(HTML,Js,Tab){
+		var htmlArea = diving('<div>'); creaArea(htmlArea,dvn('.'+HTML)[0].innerHTML,'html');
+		var jsArea = dvn('<div>'); creaArea(jsArea,dvn('.'+Js)[0].innerHTML,'js');
+		dvn('#'+Tab).divTabsTrip({
+			content:[
+				{title: 'HTML', element: htmlArea, open:true},
+				{title: 'JS', element: jsArea }
+			]
+		});
+	}
+	armaTabsTrip('aEstilosHTML', 'aEstilosJS', 'aEstilos');
+
+
+
+
+	function creaArea(elemento,content, ld){
+	    var rtn=elemento.divText({
+	        text: content,
+	        multiple:{
+	            row:30,
+	            resize:false
+	        }
+	    });
+	    return rtn;
+	}
+</script>
+
+
+
+
+<div class="aEstilosHTML">
+	<div class="d-col-6">
+		<div id="char"></div>
+	</div>
+	<div class="d-clear"></div>
+</div>
+<div class="aEstilosJS">
+	<script type="text/javascript">
+		dvn('#char').divChart({
+			dataSet:  [{name:'Serie 1',
+			            //color:"#404040",
+			            serie: [20,45,68,35,15,45],
+			            type:'line'
+			       }],
+			viewAxies:true,
+			category:['2000','2001','2002','2003','2004','2005'],
+			title:'Muestreo anual',
+			height:300
+		});
+	</script>
+</div>
+
+
+<script type="text/javascript">
+	dvn('#aEstilos').data('divTabsTrip').add({title: 'RESULT', element:'.aEstilosHTML'});
+	dvn('#aConfigSelect').data('divTabsTrip').add({title: 'RESULT', element:'.aSelectHTML'});
+	//dvn('#aConfig').data('divTabsTrip').add({title: 'RESULT', element:'.aConfigureHTML'});
+</script>

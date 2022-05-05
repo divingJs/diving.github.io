@@ -1,0 +1,144 @@
+<!--<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-header">divAutoComplete</header>
+			<section class="d-article-section">
+				Construye elementos de autocompletar de una manera rapida y sencilla
+			</section>
+			<section class="d-article-section">
+				<div class="d-col-6">
+					<div id="aEstilos"></div>
+				</div>
+			</section>
+		</article>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	console.log( 'aqui' );
+	dvn('#aEstilos').divAutoComplete({
+		datos:paises,
+		minkey:1,
+		textValue:'pais',
+		fieldValue:'pais',
+		placeholder:'hola aqui'
+	});
+</script>
+-->
+
+
+<style>
+	.aEstilosHTML,.aSelectHTML{
+		height: 19em;
+	}
+	.opBtn{
+		padding: 0.5em;
+		display: inline-block;
+	}
+</style>
+
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-header">divAutoComplete</header>
+			<section class="d-article-section">
+				Construye elementos de autocompletar de una manera rapida y sencilla.
+			</section>
+			<section class="d-article-section">
+				<div id="aEstilos"></div>
+			</section>
+		</article>
+	</div>
+</div>
+<div class="d-row">
+	<div class="d-col-12 d-sn-left d-sn-right">
+		<article class="d-article">
+			<header class="d-article-header">change</header>
+			<section class="d-article-section">
+				El evento change se ejecuta en la accion del cambio de seleccion al presionar la tecla ENTER
+			</section>
+			<section class="d-article-section">
+				<div id="aConfigSelect"></div>
+			</section>
+		</article>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	function armaTabsTrip(HTML,Js,Tab){
+		var htmlArea = diving('<div>'); creaArea(htmlArea,dvn('.'+HTML)[0].innerHTML,'html');
+		var jsArea = dvn('<div>'); creaArea(jsArea,dvn('.'+Js)[0].innerHTML,'js');
+		dvn('#'+Tab).divTabsTrip({
+			content:[
+				{title: 'HTML', element: htmlArea, open:true},
+				{title: 'JS', element: jsArea }
+			]
+		});
+	}
+	armaTabsTrip('aEstilosHTML', 'aEstilosJS', 'aEstilos');
+	armaTabsTrip('aSelectHTML', 'aSelectJS', 'aConfigSelect');
+
+
+
+
+	function creaArea(elemento,content, ld){
+	    var rtn=elemento.divText({
+	        text: content,
+	        multiple:{
+	            row:20,
+	            resize:false
+	        }
+	    });
+	    return rtn;
+	}
+</script>
+
+
+
+
+<div class="aEstilosHTML">
+	<div class="d-col-6">
+		<div id="autoComplete"></div>
+	</div>
+	<div class="d-clear"></div>
+</div>
+<div class="aEstilosJS">
+	<script type="text/javascript">
+		dvn('#autoComplete').divAutoComplete({
+			datos:paises,
+			minkey:2,
+			textValue:'pais',
+			fieldValue:'pais',
+			placeholder:'Paises'
+		});
+	</script>
+</div>
+<div class="aSelectHTML">
+	<div class="d-col-6">
+		<div id="aSelected"></div>
+	</div>
+	<div class="d-clear"></div>
+</div>
+<div class="aSelectJS">
+	<script type="text/javascript">
+		dvn('#aSelected').divAutoComplete({
+			datos:paises,
+			placeholder:'Paises',
+			textValue:'pais',
+			fieldValue:'pais',
+			change:function(e){
+				console.log( e );
+			}
+		});
+	</script>
+</div>
+
+
+<script type="text/javascript">
+	dvn('#aEstilos').data('divTabsTrip').add({title: 'RESULT', element:'.aEstilosHTML'});
+	dvn('#aConfigSelect').data('divTabsTrip').add({title: 'RESULT', element:'.aSelectHTML'});
+	//dvn('#aConfig').data('divTabsTrip').add({title: 'RESULT', element:'.aConfigureHTML'});
+</script>

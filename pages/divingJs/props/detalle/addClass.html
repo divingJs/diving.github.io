@@ -1,0 +1,53 @@
+<div class="d-col-12">
+	<div class="d-article">
+		<div class="d-article-header">
+			<div>.addClass()</div>
+		</div>
+		<div class="d-article-section">
+			<div>Te permite agregar una o varias clases a un elemento del dom</div>
+		</div>
+		<div class="d-article">
+			<div class="d-article-section">
+				<pre>
+&lt;style type="text/css"&gt;
+	.yellow{
+		background-color:yellow;
+	}
+	.green{
+		background-color:green;
+	}
+&lt;/style&gt;
+&lt;p&gt;
+	Este es un estilo yellow
+&lt;/p&gt;
+&lt;p id="green"&gt;
+	Este es un estilo green
+&lt;/p&gt;
+
+&lt;script type="text/javascript"&gt;
+	dvn('p').addClass('yellow');
+	dvn('#green').addClass('green');
+&lt;/script&gt;
+				</pre>
+			</div>
+		</div>
+		<div class="d-article">
+			<div class="d-article-section">
+				<p>Este es un estilo yellow</p>
+				<p id="green">Esete es un estilo green</p>
+				<style type="text/css">
+					.yellow{
+						background-color:yellow;
+					}
+					.green{
+						background-color:green;
+					}
+				</style>
+				<script type="text/javascript">
+					dvn('p').addClass('yellow');
+					dvn('#green').addClass('green');
+				</script>
+			</div>
+		</div>
+	</div>
+</div>
